@@ -14,12 +14,12 @@ main:
     
   - title: "CV"
     url: /cv/
-    
+
   #- title: "Outreach"
   #  url: /outreach/
     
-  #- title: "Posts"
-  #  url: /posts/
+  - title: "Posts"
+    url: /posts/
     
   #- title: "Research"
   #  url: /research/
