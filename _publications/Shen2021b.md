@@ -2,7 +2,7 @@
 title: "Measurements of the Net Charge Density of Space Plasmas"
 collection: publications
 permalink: /publication/Shen2021b
-date: 2021-dec
+date: 2021-11-01
 venue: 'J. Geophys. Res.: Space Phys.'
 paperurl: '/files/papers/2021/Shen2021b - Measurements of the Net Charge Density of Space Plasmas.pdf'
 link: 'https://doi.org/10.1029/2021JA029511'

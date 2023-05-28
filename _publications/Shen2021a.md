@@ -2,7 +2,7 @@
 title: "A General Algorithm for the Linear and Quadratic Gradients of Physical Quantities Based on 10 or More Point Measurements"
 collection: publications
 permalink: /publication/Shen2021a
-date: 2021-jun
+date: 2021-06
 venue: 'J. Geophys. Res.: Space Phys.'
 paperurl: '/files/papers/2021/A General Algorithm for the Linear and Quadratic Gradients of Physical Quantities Based on 10 or More Point Measurements-17120947 (1).pdf'
 link: 'https://doi.org/10.1029/2021JA029121'
