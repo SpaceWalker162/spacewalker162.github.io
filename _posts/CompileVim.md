@@ -1,7 +1,7 @@
 ---
 title: Compile VIM on MacOS with Python3 Dynamic Support
-date: 2021-07-01
-permalink: /posts/2021/07-test
+date: 2023-05-27
+permalink: /posts/2023/CVMPDS
 excerpt_separator: <!--more-->
 toc: true
 tags:

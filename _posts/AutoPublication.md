@@ -1,7 +1,7 @@
 ---
 title: Automatically Posting My Publications on This Site
 date: 2023-05-28
-permalink: /posts/2021/07-test
+permalink: /posts/2023/APMPTS
 excerpt_separator: <!--more-->
 toc: true
 tags:
