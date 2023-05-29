@@ -7,6 +7,8 @@ toc: true
 tags:
   - test
 ---
+<!--more-->
+
 1. Move to the home directory
 
         cd
