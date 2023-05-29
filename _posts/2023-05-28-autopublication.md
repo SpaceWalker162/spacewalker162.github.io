@@ -7,7 +7,7 @@ toc: true
 tags:
   - web-dev
 ---
-This post presents the process of automatically posting my publications.
+This post presents the process of automatically posting my publications. <!--more-->
 
 1. I use Jabref to manage my library. The data of my publications are saved in a bib file.
 
