@@ -1,16 +1,19 @@
 # main links links
 main:
+  - title: "Research"
+    url: /research/
+
   - title: "Publications"
     url: /publications/
     
-  - title: "Talks"
-    url: /talks/
+      #  - title: "Talks"
+      #    url: /talks/
     
-  - title: "Teaching"
-    url: /teaching/
+      #  - title: "Teaching"
+      #    url: /teaching/
     
-  - title: "Side Projects"
-    url: /sidework/
+      #  - title: "Side Projects"
+      #    url: /sidework/
     
   - title: "CV"
     url: /cv/
@@ -20,9 +23,6 @@ main:
     
   - title: "Posts"
     url: /posts/
-    
-  #- title: "Research"
-  #  url: /research/
 
   #- title: "Software"
   #  url: /software/
