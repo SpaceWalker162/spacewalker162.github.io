@@ -15,8 +15,8 @@ main:
       #  - title: "Side Projects"
       #    url: /sidework/
     
-  - title: "CV"
-    url: /cv/
+      #  - title: "CV"
+      #    url: /cv/
 
   #- title: "Outreach"
   #  url: /outreach/
