@@ -1,0 +1,359 @@
+---
+title: How to maintain notebook with Lyx/latex
+date: 2023-08-05
+permalink: /posts/2023/HMNWLL
+excerpt_separator: <!--more-->
+toc: true
+tags:
+  - web-dev
+---
+This post details how I maintain with Lyx/latex my notebook, with each chapter dedicated to a subject of interest.
+<!--more-->
+
+The wanted notebook is a pdf file with hyperlinked cross-references and citations. Each chapter has its own bibliography. The maintaining and updating work should be simple and clear. Since my notes on physics and mathematics usually contain a lot of long equations, Lyx is used to visualize these equations for ease of initial coding and subsequent modifications.
+
+The directory structure is shown in [this
+file](../files/miscellaneous/notebook_tree.txt.pdf)
+or see below:
+```{css, echo=FALSE}
+pre {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+pre[class] {
+  max-height: 100px;
+}
+
+```
+```
+.
+├── Notes
+│   ├── Notes.aux
+│   ├── Notes.bbl
+│   ├── Notes.blg
+│   ├── Notes.cls
+│   ├── Notes.log
+│   ├── Notes.out
+│   ├── Notes.pdf
+│   ├── Notes.synctex.gz
+│   ├── Notes.tex
+│   ├── Notes.toc
+│   ├── NotesComputerTech
+│   │   ├── NotesComputerTech.aux
+│   │   ├── NotesComputerTech.log
+│   │   ├── NotesComputerTech.out
+│   │   ├── NotesComputerTech.pdf
+│   │   ├── NotesComputerTech.synctex.gz
+│   │   ├── NotesComputerTech.tex
+│   │   ├── NotesComputerTech.toc
+│   │   ├── bu1.aux
+│   │   ├── bu2.aux
+│   │   └── chapters
+│   │       ├── ProgrammingLanguage
+│   │       │   ├── Linux - Copy.tex
+│   │       │   ├── Linux.tex.bak
+│   │       │   ├── Linux.tex.sav
+│   │       │   ├── Linux.tex~
+│   │       │   ├── ProgrammingLanguage.aux
+│   │       │   ├── ProgrammingLanguage.tex
+│   │       │   └── ProgrammingLanguage.tex.bak
+│   │       └── Software
+│   │           └── Software.tex
+│   ├── NotesMathematics
+│   │   ├── NotesMathematics.aux
+│   │   ├── NotesMathematics.log
+│   │   ├── NotesMathematics.lyx
+│   │   ├── NotesMathematics.lyx~
+│   │   ├── NotesMathematics.out
+│   │   ├── NotesMathematics.pdf
+│   │   ├── NotesMathematics.synctex.gz
+│   │   ├── NotesMathematics.tex
+│   │   ├── NotesMathematics.toc
+│   │   ├── bu1.aux
+│   │   ├── chapters
+│   │   │   ├── Calculus
+│   │   │   │   ├── Calculus.lyx
+│   │   │   │   ├── Calculus.lyx~
+│   │   │   │   ├── Calculus.tex
+│   │   │   │   └── preamble.txt
+│   │   │   ├── DifferentialEquations
+│   │   │   │   ├── DifferentialEquations.lyx
+│   │   │   │   ├── DifferentialEquations.lyx~
+│   │   │   │   ├── DifferentialEquations.pdf
+│   │   │   │   ├── DifferentialEquations.tex
+│   │   │   │   ├── Mathematics.tex.bak
+│   │   │   │   └── preamble.txt
+│   │   │   ├── MethodsOfMathematicalPhysics
+│   │   │   │   ├── MethodsOfMathematicalPhysics.lyx
+│   │   │   │   ├── MethodsOfMathematicalPhysics.lyx~
+│   │   │   │   ├── MethodsOfMathematicalPhysics.tex
+│   │   │   │   └── preamble.txt
+│   │   │   └── NumericalAnalysis
+│   │   │       ├── NumericalAnalysis.1.aux
+│   │   │       ├── NumericalAnalysis.1.bbl
+│   │   │       ├── NumericalAnalysis.aux
+│   │   │       ├── NumericalAnalysis.log
+│   │   │       ├── NumericalAnalysis.lyx
+│   │   │       ├── NumericalAnalysis.lyx~
+│   │   │       ├── NumericalAnalysis.out
+│   │   │       ├── NumericalAnalysis.pdf
+│   │   │       ├── NumericalAnalysis.synctex.gz
+│   │   │       ├── NumericalAnalysis.tex
+│   │   │       ├── btaux.aux
+│   │   │       ├── btbbl.aux
+│   │   │       └── preamble.txt
+│   │   ├── figures
+│   │   │   ├── s1.JPG
+│   │   │   └── s2.JPG
+│   │   └── preamble.txt
+│   ├── NotesOthers
+│   │   ├── NotesOther.aux
+│   │   ├── NotesOther.log
+│   │   ├── NotesOther.out
+│   │   ├── NotesOther.pdf
+│   │   ├── NotesOther.synctex.gz
+│   │   ├── NotesOther.tex
+│   │   ├── NotesOther.toc
+│   │   ├── bu1.aux
+│   │   ├── bu2.aux
+│   │   ├── bu3.aux
+│   │   ├── bu4.aux
+│   │   └── chapters
+│   │       ├── LearningChinese
+│   │       │   ├── LearningChinese.tex
+│   │       │   └── LearningChinese.tex.bak
+│   │       ├── Media
+│   │       │   ├── media.tex
+│   │       │   └── media.tex.bak
+│   │       ├── OtherNotes
+│   │       │   ├── OtherNotes.aux
+│   │       │   └── OtherNotes.tex
+│   │       └── PoliticalScience
+│   │           ├── PoliticalScience.aux
+│   │           └── PoliticalScience.tex
+│   ├── NotesSpacePhysics
+│   │   ├── NotesSpacePhysics.aux
+│   │   ├── NotesSpacePhysics.log
+│   │   ├── NotesSpacePhysics.out
+│   │   ├── NotesSpacePhysics.pdf
+│   │   ├── NotesSpacePhysics.synctex.gz
+│   │   ├── NotesSpacePhysics.tex
+│   │   ├── NotesSpacePhysics.toc
+│   │   ├── bu1.aux
+│   │   ├── bu2.aux
+│   │   ├── bu3.aux
+│   │   ├── bu4.aux
+│   │   ├── bu5.aux
+│   │   ├── bu6.aux
+│   │   ├── bu7.aux
+│   │   └── chapters
+│   │       ├── BowShock
+│   │       │   ├── BowShock.aux
+│   │       │   ├── BowShock.tex
+│   │       │   ├── BowShock.tex.bak
+│   │       │   └── BowShock.tex.sav
+│   │       ├── CommonNotesOnSpacePhysics
+│   │       │   ├── CommonNotesOnSpacePhysics.aux
+│   │       │   └── CommonNotesOnSpacePhysics.tex
+│   │       ├── GeometryAnalysis
+│   │       │   ├── GeometryAnalysis.aux
+│   │       │   ├── GeometryAnalysis.tex
+│   │       │   └── GeometryAnalysis.tex.bak
+│   │       ├── Heliosphere
+│   │       │   ├── Heliosphere.aux
+│   │       │   ├── Heliosphere.tex
+│   │       │   └── Heliosphere.tex.bak
+│   │       ├── InnerMagnetosphere
+│   │       │   ├── InnerMagnetosphere.aux
+│   │       │   ├── InnerMagnetosphere.tex
+│   │       │   ├── InnerMagnetosphere.tex.bak
+│   │       │   └── figures
+│   │       ├── NewThoughtsOnSpacePhysics
+│   │       │   ├── NewThoughts.aux
+│   │       │   └── NewThoughtsOnSpacePhysics.tex
+│   │       └── Planets
+│   │           ├── Planets.tex
+│   │           └── figures
+│   │               ├── SaturnMP.png
+│   │               ├── SaturnMPAsym.png
+│   │               └── saturnProtonRadiationBelt.pdf
+│   ├── NotesTheoreticalPhysics
+│   │   ├── NotesTheoreticalPhysics.1.aux
+│   │   ├── NotesTheoreticalPhysics.1.bbl
+│   │   ├── NotesTheoreticalPhysics.1.blg
+│   │   ├── NotesTheoreticalPhysics.2.aux
+│   │   ├── NotesTheoreticalPhysics.2.bbl
+│   │   ├── NotesTheoreticalPhysics.2.blg
+│   │   ├── NotesTheoreticalPhysics.3.aux
+│   │   ├── NotesTheoreticalPhysics.3.bbl
+│   │   ├── NotesTheoreticalPhysics.3.blg
+│   │   ├── NotesTheoreticalPhysics.aux
+│   │   ├── NotesTheoreticalPhysics.fdb_latexmk
+│   │   ├── NotesTheoreticalPhysics.fls
+│   │   ├── NotesTheoreticalPhysics.glsdefs
+│   │   ├── NotesTheoreticalPhysics.log
+│   │   ├── NotesTheoreticalPhysics.lyx
+│   │   ├── NotesTheoreticalPhysics.lyx~
+│   │   ├── NotesTheoreticalPhysics.out
+│   │   ├── NotesTheoreticalPhysics.pdf
+│   │   ├── NotesTheoreticalPhysics.synctex.gz
+│   │   ├── NotesTheoreticalPhysics.tex
+│   │   ├── NotesTheoreticalPhysics.tex.bak.aux
+│   │   ├── NotesTheoreticalPhysics.tex.bak.glsdefs
+│   │   ├── NotesTheoreticalPhysics.tex.bak.log
+│   │   ├── NotesTheoreticalPhysics.tex.bak.out
+│   │   ├── NotesTheoreticalPhysics.tex.bak.pdf
+│   │   ├── NotesTheoreticalPhysics.tex.bak.synctex.gz
+│   │   ├── NotesTheoreticalPhysics.tex.bak.tex
+│   │   ├── NotesTheoreticalPhysics.tex.bak.toc
+│   │   ├── NotesTheoreticalPhysics.toc
+│   │   ├── NotesTheoreticalPhysics.xdv
+│   │   ├── chapters
+│   │   │   ├── ClassicalMechanics
+│   │   │   │   ├── ClassicalMechanics.lyx
+│   │   │   │   ├── ClassicalMechanics.lyx~
+│   │   │   │   ├── ClassicalMechanics.tex
+│   │   │   │   ├── ClassicalMechanics.tex.bak
+│   │   │   │   └── preamble.txt
+│   │   │   ├── Electrodynamics
+│   │   │   │   ├── Electrodynamics.lyx
+│   │   │   │   ├── Electrodynamics.lyx~
+│   │   │   │   ├── Electrodynamics.tex
+│   │   │   │   ├── figures
+│   │   │   │   │   ├── alfvenLayer.pdf
+│   │   │   │   │   └── preamble.txt
+│   │   │   │   └── preamble.txt
+│   │   │   ├── FluidMechanics
+│   │   │   │   ├── FluidMechanics.lyx
+│   │   │   │   ├── FluidMechanics.lyx~
+│   │   │   │   ├── FluidMechanics.tex
+│   │   │   │   ├── figures
+│   │   │   │   │   ├── forceOnFluxTube.png
+│   │   │   │   │   ├── preamble.txt
+│   │   │   │   │   └── steepeningOfWave.png
+│   │   │   │   └── preamble.txt
+│   │   │   ├── PlasmaPhysics
+│   │   │   │   ├── PlasmaPhysics.lyx
+│   │   │   │   ├── PlasmaPhysics.lyx~
+│   │   │   │   ├── PlasmaPhysics.pdf
+│   │   │   │   ├── PlasmaPhysics.tex
+│   │   │   │   ├── PlasmaPhysicsBak.tex
+│   │   │   │   ├── figures
+│   │   │   │   │   ├── forceOnFluxTube.png
+│   │   │   │   │   ├── preamble.txt
+│   │   │   │   │   └── steepeningOfWave.png
+│   │   │   │   └── preamble.txt
+│   │   │   ├── QuantumMechanics
+│   │   │   │   ├── QuantumMechanics.lyx
+│   │   │   │   ├── QuantumMechanics.lyx~
+│   │   │   │   ├── QuantumMechanics.tex
+│   │   │   │   ├── QuantumMechanics.tex.bak
+│   │   │   │   └── preamble.txt
+│   │   │   └── StatisticalMechanics
+│   │   │       ├── StatisticalMechanics.lyx
+│   │   │       ├── StatisticalMechanics.lyx~
+│   │   │       ├── StatisticalMechanics.tex
+│   │   │       └── preamble.txt
+│   │   └── preamble.txt
+│   ├── chapters
+│   │   ├── BowShock
+│   │   │   ├── BowShock.aux
+│   │   │   ├── BowShock.tex
+│   │   │   ├── BowShock.tex.bak
+│   │   │   └── BowShock.tex.sav
+│   │   ├── ClassicalMechanics
+│   │   │   ├── ClassicalMechanics.tex
+│   │   │   └── ClassicalMechanics.tex.bak
+│   │   ├── CommonNotesOnSpacePhysics
+│   │   │   ├── CommonNotesOnSpacePhysics.aux
+│   │   │   └── CommonNotesOnSpacePhysics.tex
+│   │   ├── ComputerTech
+│   │   │   ├── ComputerTech.aux
+│   │   │   └── ComputerTech.tex
+│   │   ├── Electrodynamics
+│   │   │   ├── Electrodynamics.tex
+│   │   │   └── figures
+│   │   │       └── alfvenLayer.pdf
+│   │   ├── GeometryAnalysis
+│   │   │   ├── GeometryAnalysis.aux
+│   │   │   ├── GeometryAnalysis.tex
+│   │   │   └── GeometryAnalysis.tex.bak
+│   │   ├── Heliosphere
+│   │   │   ├── Heliosphere.aux
+│   │   │   ├── Heliosphere.tex
+│   │   │   └── Heliosphere.tex.bak
+│   │   ├── InnerMagnetosphere
+│   │   │   ├── InnerMagnetosphere.aux
+│   │   │   ├── InnerMagnetosphere.tex
+│   │   │   ├── InnerMagnetosphere.tex.bak
+│   │   │   └── figures
+│   │   │       └── saturnProtonRadiationBelt.pdf
+│   │   ├── LatexNotes
+│   │   │   └── LatexNotes.tex
+│   │   ├── LearningChinese
+│   │   │   ├── LearningChinese.tex
+│   │   │   └── LearningChinese.tex.bak
+│   │   ├── Mathematics
+│   │   │   ├── Mathematics.tex
+│   │   │   └── Mathematics.tex.bak
+│   │   ├── Media
+│   │   │   ├── media.tex
+│   │   │   └── media.tex.bak
+│   │   ├── NewThoughts
+│   │   │   ├── NewThoughts.aux
+│   │   │   └── NewThoughts.tex
+│   │   ├── OtherNotes
+│   │   │   ├── OtherNotes.aux
+│   │   │   └── OtherNotes.tex
+│   │   ├── PlasmaPhysics
+│   │   │   ├── PlasmaPhysics.tex
+│   │   │   └── figures
+│   │   │       └── forceOnFluxTube.png
+│   │   ├── PoliticalScience
+│   │   │   ├── PoliticalScience.aux
+│   │   │   └── PoliticalScience.tex
+│   │   ├── ProgrammingLanguage
+│   │   │   ├── Linux - Copy.tex
+│   │   │   ├── Linux.tex.bak
+│   │   │   ├── Linux.tex.sav
+│   │   │   ├── Linux.tex~
+│   │   │   ├── ProgrammingLanguage.aux
+│   │   │   ├── ProgrammingLanguage.tex
+│   │   │   └── ProgrammingLanguage.tex.bak
+│   │   ├── QuantumMechanics
+│   │   │   ├── QuantumMechanics.tex
+│   │   │   └── QuantumMechanics.tex.bak
+│   │   ├── SpaceMissions
+│   │   │   ├── SpaceMissions.aux
+│   │   │   └── SpaceMissions.tex
+│   │   └── StatisticalMechanics
+│   │       └── StatisticalMechanics.tex
+│   ├── definitions
+│   │   ├── BookParameters.txt
+│   │   ├── definitions.tex
+│   │   ├── definitions.tex.bak
+│   │   ├── myNotes.cls
+│   │   └── myNotes.layout
+│   ├── mathematicaNotes
+│   │   ├── notes.nb
+│   │   ├── notes.tex
+│   │   ├── notes_gr1.eps
+│   │   └── notes_gr2.eps
+│   ├── preambleConfig.py
+│   ├── test
+│   │   ├── bu1.aux
+│   │   ├── bu2.aux
+│   │   ├── document.aux
+│   │   ├── document.bbl
+│   │   ├── document.blg
+│   │   ├── document.log
+│   │   ├── document.pdf
+│   │   ├── document.synctex.gz
+│   │   ├── document.tex
+│   │   └── myLib.bib
+│   └── tex2lyxNotes.py
+└── zhou.sty
+
+68 directories, 259 files
+```
