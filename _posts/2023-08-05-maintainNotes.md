@@ -1,5 +1,5 @@
 ---
-title: How to maintain notebook with Lyx/latex
+title: How to maintain a notebook with Lyx/latex
 date: 2023-08-05
 permalink: /posts/2023/HMNWLL
 excerpt_separator: <!--more-->
@@ -11,11 +11,12 @@ This post details how I maintain with Lyx/latex my notebook, with each chapter d
 <!--more-->
 
 ## Purpose
-The wanted notebook is a pdf file with hyperlinked cross-references and citations. Each chapter has its own bibliography. The maintaining and updating work should be simple and clear. Since my notes on physics and mathematics usually contain a lot of long equations, Lyx is used to visualize these equations for ease of initial coding and subsequent modifications.
+The wanted notebook is a pdf file with hyperlinked cross-references and citations. Each chapter has its own bibliography. The maintaining and updating work should be simple and clear. Since my notes on physics and mathematics usually contain a lot of long equations, Lyx is used to visualize these equations for the ease of initial coding and subsequent modifications.
 
 ## Directory Structure
 The directory structure is shown [here](/files/miscellaneous/notebook_tree.txt)
-[//]: # (to do: add the notebook_tree.txt file as scrollable code block)
+
+[//]: # (to do: add the notebook_tree.txt file as a scrollable code block)
 
 `zhou.sty` contains the definitions I use for almost all works with latex.
 `Notes` contains all my notebooks, such as `NotesComputerTech` and `NotesTheoreticalPhysics`.
