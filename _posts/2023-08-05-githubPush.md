@@ -21,5 +21,6 @@ solution is to use proxy:
         git config --global https.proxy http://127.0.0.1:7890
 
 ## password
-account password for authentication is no longer supported. To push via https, use a personal access token in place of password when asked to type in. Personal access token can be generated at the website through `settings → developers settings → generate new token`
+account password for authentication is no longer supported. To push via https, use a personal access token in place of password when asked to type in. Personal access token can be generated at the website through `settings → developers settings → Personal access tokens (classic) → generate new token`.
+
 
