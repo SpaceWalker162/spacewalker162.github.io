@@ -10,9 +10,10 @@ tags:
 <!--more-->
 
 ## Remote Working
-`ssh`
+#`ssh`
 
-`samba`
+#`samba`
+for data sharing and retrieving
 
 ## Data Analysis
 `python`
@@ -20,8 +21,12 @@ tags:
 ## Analytical Analysis
 `mathematica`
 
-## Editor
-`vim`
+## Text
+#`vim`
+an editor, with plugins including `YouCompleteMe`
+
+#`latex`
+for typesetting
 
 ## Terminal Tools
 #`fzf`
